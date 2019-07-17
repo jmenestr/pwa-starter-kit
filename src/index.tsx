@@ -3,20 +3,22 @@ import * as ReactDOM from 'react-dom'
 
 const rootEl = document.getElementById('root')
 import '../styles/main.scss'
+// import './boxAnimation.scss';
+import { Card } from './components/Card';
+import { AnimatedGrid } from './animations/Grid/index';
+
+function sumOfCords(index, length) {
+  return index % length + Math.floor(index / length)
+}
+
 const App = () => (
-  <div className="max-w-sm rounded overflow-hidden shadow-lg">
-    <img className="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains" />
-    <div className="px-6 py-4">
-      <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
-      <p className="text-gray-700 text-base">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-      </p>
-    </div>
-    <div className="px-6 py-4">
-      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#photography</span>
-      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#travel</span>
-      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#winter</span>
-    </div>
+  <div className="flex flex-wrap" style={{height: 800}}>
+    {/* {
+      [1,2,3,4,5,5,6,7,4].map((v, index) => 
+        <Card className={`box box-${sumOfCords(index, 3)}`}  />
+      )
+    } */}
+    <AnimatedGrid />
   </div>
 )
 ReactDOM.render(<App />, rootEl);

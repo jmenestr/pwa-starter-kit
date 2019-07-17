@@ -1,0 +1,44 @@
+$animationDuration: 450ms;
+$delayBase: 450ms / 4;
+$delayStep: 50ms;
+
+.card {
+  flex: 0 1 calc(24% - 1em);
+  margin-bottom: 1em;
+}
+// .box {
+//   animation-name: fadeIn;
+//   animation-duration: $animationDuration;
+//   animation-fill-mode: forwards;
+//   animation-delay: 50ms;
+//   opacity: 0;
+//   width: 60px;
+//   height: 5
+// }
+
+// @keyframes fadeIn {
+//   0% {
+//     opacity: 0;
+//   }
+
+//   100% {
+//     opacity: 1;
+//   }
+// }
+
+
+
+// .box-1 {
+//   animation-delay: 100ms;
+// }
+
+// .box-2 {
+//   animation-delay: 200ms;
+// }
+
+// .box-3 {
+//   animation-delay: 300ms;
+// }
+// .box-4 {
+//   animation-delay: 400ms;
+// }
